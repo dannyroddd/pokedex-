@@ -23,10 +23,10 @@ app.post('/', (req, res)=>{
 })
 
 //DESTROY
-// app.delete('/:indexOfPokemonArray', (req, res) =>{
-//     pokemon.splice(req.params.indexOfPokemonArray,1)
-//     res.redirect('/')
-// })
+app.delete('/:indexOfPokemonArray', (req, res) =>{
+    pokemon.splice(req.params.indexOfPokemonArray,1)
+    res.redirect('/')
+})
 
 
 //SHOW 
