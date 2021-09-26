@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<body>
+  
+    <h1>Update Pokemon</h1>
+    <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+       
+                    <!-- <img src=
+                    "<%=pokedex.img%>"
+                        alt="" value="<%=pokedex.img%>" ><br> -->
+                       
+        Name: <input type='text' name="name" /> <br>
+        Type: <input type="text" name="type" /> <br>             
+        HP: <input type='text' name="hp" /> <br>
+        Attack: <input type='text' name="attack" /> <br>
+        Defense: <input type='text' name="defense" /> <br>
+    
+        
+        <input type="submit" value="Edit Pokemon"/>
+        </form>
+   
+</body>
+</html>
