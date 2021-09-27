@@ -28,7 +28,17 @@ app.get("/pokemon/:indexOfPokemonArray/edit", (req, res) => {
   
   //UPDATE
 app.put('/pokemon/:indexOfPokemonArray', (req, res)=>{
-    pokemon[req.params.indexOfPokemonArray] = req.body
+  const updatePokemon = {
+    img: "https://cdn-icons-png.flaticon.com/512/188/188918.png",
+    name: req.body.name,
+    type: req.body.type,
+    stats: {
+      hp: req.body.hp,
+      attack: req.body.attack,
+      defense: req.body.defense 
+    }
+  } 
+    pokemon[req.params.indexOfPokemonArray] = updatePokemon
     res.redirect('/pokemon')
   })
 
@@ -38,8 +48,19 @@ app.get('/pokemon/new', (req, res)=>{
     res.render('new.ejs')
 })
 
-app.post('/pokemon', (req, res)=>{    
-    pokemon.push(req.body)
+app.post('/pokemon', (req, res)=>{  
+  console.log(req.body) 
+  const newPokemon = {
+    img: "https://cdn-icons-png.flaticon.com/512/188/188918.png",
+    name: req.body.name,
+    type: req.body.type,
+    stats: {
+      hp: req.body.hp,
+      attack: req.body.attack,
+      defense: req.body.defense 
+    }
+  } 
+    pokemon.push(newPokemon)
     res.redirect('/pokemon')
 })
 
