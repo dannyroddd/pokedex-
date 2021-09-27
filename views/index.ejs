@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+       
+        <title>Pokedex</title>
+    </head>
     <body>
        
-        <h1>Pokedex Home</h1>
+        <h1 class="home">Pokedex Home</h1>
         <nav>
-            <a href="/pokemon/new">Add a new Pokemon</a>
+            <a href="/pokemon/new" class="newPoke">Add a new Pokemon</a>
         </nav>
-        <ul>
+        <div>
+        <ul class="list">
             <% for(let i = 0; i < data.length; i++){ %>
 
                 <li>
@@ -17,18 +25,18 @@
                         alt="" >
                         </a>
                         <a href="/pokemon/<%= i %>">
-                            <h3><%= data[i].name %></h3>
+                            <h3 class="name"><%= data[i].name %></h3>
                                 </a>
                                
                     
                         <form action="/pokemon/<%= i %>?_method=DELETE" method="POST">
-                        <input type="submit" value="DELETE">
+                        <input type="submit" value="DELETE" class="delete">
                     </form>
-                    <a href="/pokemon/<%= i %>/edit">EDIT</a>
+                    <a href="/pokemon/<%= i %>/edit" class="edit">EDIT</a>
                 </li>
 
             <% } %>
         </ul>
-       
+    </div>
     </body>
 </html>

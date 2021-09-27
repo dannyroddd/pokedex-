@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        
+        <title>Pokedex</title>
+    </head>
 <body>
   
-    <h1>Update Pokemon</h1>
-    <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+    <h1 class="update">Update Pokemon</h1>
+    <form action="/pokemon/<%= index %>?_method=PUT" method="POST" class="editform">
        
                     <!-- <img src=
                     "<%=pokedex.img%>"
                         alt="" value="<%=pokedex.img%>" ><br> -->
                        
-        Name: <input type='text' name="name" /> <br>
-        Type: <input type="text" name="type" /> <br>             
-        HP: <input type='text' name="hp" /> <br>
-        Attack: <input type='text' name="attack" /> <br>
-        Defense: <input type='text' name="defense" /> <br>
+        Name: <input type='text' name="name" class="editname"/> <br>
+        Type: <input type="text" name="type" class="edittype"/> <br>             
+        HP: <input type='text' name="hp" class="edithp"/> <br>
+        Attack: <input type='text' name="attack" class="editatk"/> <br>
+        Defense: <input type='text' name="defense" class="editdef" /> <br>
     
         
-        <input type="submit" value="Edit Pokemon"/>
+        <input type="submit" value="Edit Pokemon" class="editsub"/>
         </form>
    
 </body>

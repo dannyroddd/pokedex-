@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-   
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="/style.css">
+        <title>Pokedex</title>
+    </head>
 <body>
+
+    <h1 class="addnew">New Pokemon</h1>
    
-    <h1>New Pokemon</h1>
-    <form action="/pokemon" method="POST">
        
-                        <h1>New Pokemon</h1>
-                        <form action="/pokemon" method='POST'>
+                      
+                        <form action="/pokemon" method='POST' class="newform">
                             <img src=
                             "https://cdn-icons-png.flaticon.com/512/188/188918.png"
                                alt=""  ><br>
-                        Name: <input type='text' name="name"/> <br>
-                        Type: <input type="text" name="type"/> <br>             
-                        HP: <input type='text' name="hp"/> <br>
-                        Attack: <input type='text' name="attack"/> <br>
-                        Defense: <input type='text' name="defense"/> <br>
+                        Name: <input type='text' name="name" class="inname"/> <br>
+                        Type: <input type="text" name="type" class="intype"/> <br>             
+                        HP: <input type='text' name="hp" class="inhp"/> <br>
+                        Attack: <input type='text' name="attack" class="inatk"/> <br>
+                        Defense: <input type='text' name="defense" class="indef"/> <br>
     
-    <input type="submit" value="Add Pokemon"/>
+    <input type="submit" value="Add Pokemon" class="inadd"/>
     </form>
- 
+</div>
 </body>
 </html>
